@@ -1,0 +1,51 @@
+{
+    "name": "laratoolbox/database-viewer",
+    "description": "Get tables and columns on cli for seamless development experience",
+    "keywords": [
+        "laratoolbox",
+        "databaseviewer"
+    ],
+    "homepage": "https://github.com/laratoolbox/database-viewer",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Semih ERDOGAN",
+            "email": "hasansemiherdogan@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "illuminate/support": "^5.5|^5.6|^5.7|^5.8|^6.0|^7.0|^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^3.5|^3.6|^3.7|^3.8|^4.0|^5.0|^6.0",
+        "phpunit/phpunit": "~6.0|^7.0|^7.5|^8.4|^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "LaraToolbox\\DatabaseViewer\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "LaraToolbox\\DatabaseViewer\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LaraToolbox\\DatabaseViewer\\DatabaseViewerServiceProvider"
+            ]
+        }
+    }
+}
