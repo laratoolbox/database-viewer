@@ -68,22 +68,20 @@ class ShowTableColumnsForDocBlockCommand extends Command
      */
     private function getType($databaseType)
     {
-        if (strpos($databaseType, 'timestamp') !== false) {
-            return 'string|\Illuminate\Support\Carbon';
-        }
+        switch (true) {
+            case strpos($databaseType, 'char') !== false:
+            case strpos($databaseType, 'text') !== false:
+                return 'string';
 
-        if (strpos($databaseType, 'date') !== false) {
-            return 'string|\Illuminate\Support\Carbon';
-        }
+            case strpos($databaseType, 'int') !== false:
+                return 'int';
 
-        if (strpos($databaseType, 'char') !== false) {
-            return 'string';
-        }
+            case strpos($databaseType, 'timestamp') !== false:
+            case strpos($databaseType, 'date') !== false:
+                return 'string|\Illuminate\Support\Carbon';
 
-        if (strpos($databaseType, 'int') !== false) {
-            return 'int';
+            default:
+                return $databaseType;
         }
-
-        return $databaseType;
     }
 }
