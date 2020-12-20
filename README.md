@@ -1,30 +1,66 @@
-# Very short description of the package
+![Social Image](social.jpg)
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/laratoolbox/databaseviewer.svg?style=flat-square)](https://packagist.org/packages/laratoolbox/databaseviewer)
-[![Build Status](https://img.shields.io/travis/laratoolbox/databaseviewer/master.svg?style=flat-square)](https://travis-ci.org/laratoolbox/databaseviewer)
-[![Quality Score](https://img.shields.io/scrutinizer/g/laratoolbox/databaseviewer.svg?style=flat-square)](https://scrutinizer-ci.com/g/laratoolbox/databaseviewer)
-[![Total Downloads](https://img.shields.io/packagist/dt/laratoolbox/databaseviewer.svg?style=flat-square)](https://packagist.org/packages/laratoolbox/databaseviewer)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/laratoolbox/database-viewer.svg?style=flat-square)](https://packagist.org/packages/laratoolbox/database-viewer)
+[![Build Status](https://img.shields.io/travis/laratoolbox/database-viewer/master.svg?style=flat-square)](https://travis-ci.org/laratoolbox/database-viewer)
+[![Quality Score](https://img.shields.io/scrutinizer/g/laratoolbox/database-viewer.svg?style=flat-square)](https://scrutinizer-ci.com/g/laratoolbox/database-viewer)
+[![Total Downloads](https://img.shields.io/packagist/dt/laratoolbox/database-viewer.svg?style=flat-square)](https://packagist.org/packages/laratoolbox/database-viewer)
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
+This package adds commands for getting table / column info into artisan cli.
 
 ## Installation
 
 You can install the package via composer:
 
 ```bash
-composer require laratoolbox/databaseviewer
+$ composer require laratoolbox/database-viewer
 ```
 
 ## Usage
 
-``` php
-// Usage description here
+* Get tables
+```shell
+$ php artisan db:tables
+
+failed_jobs
+migrations
+password_resets
+users
+```
+
+* Get columns for a specific table
+```shell
+$ php artisan db:columns --table=users
+
+id
+name
+email
+email_verified_at
+password
+remember_token
+created_at
+updated_at
+```
+
+* Get columns for a specific table as doc block formatted
+```shell
+$ php artisan db-columns-doc --table=users
+
+/**
+ * @property int $id
+ * @property string $name
+ * @property string $email
+ * @property string|\Illuminate\Support\Carbon $email_verified_at
+ * @property string $password
+ * @property string $remember_token
+ * @property string|\Illuminate\Support\Carbon $created_at
+ * @property string|\Illuminate\Support\Carbon $updated_at
+ */
 ```
 
 ### Testing
 
 ``` bash
-composer test
+$ composer test
 ```
 
 ### Changelog
@@ -43,11 +79,9 @@ If you discover any security related issues, please email hasansemiherdogan@gmai
 
 - [Semih ERDOGAN](https://github.com/laratoolbox)
 - [All Contributors](../../contributors)
+- The social image generated with [banners.beyondco.de](https://banners.beyondco.de/).
+- This package was generated using the [Laravel Package Boilerplate](https://laravelpackageboilerplate.com).
 
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
-
-## Laravel Package Boilerplate
-
-This package was generated using the [Laravel Package Boilerplate](https://laravelpackageboilerplate.com).
