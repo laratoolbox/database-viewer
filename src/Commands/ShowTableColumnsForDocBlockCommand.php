@@ -76,9 +76,14 @@ class ShowTableColumnsForDocBlockCommand extends Command
             case strpos($databaseType, 'int') !== false:
                 return 'int';
 
-            case strpos($databaseType, 'timestamp') !== false:
             case strpos($databaseType, 'date') !== false:
+            case strpos($databaseType, 'timestamp') !== false:
                 return 'string|\Illuminate\Support\Carbon';
+
+            case strpos($databaseType, 'float') !== false:
+            case strpos($databaseType, 'decimal') !== false:
+            case strpos($databaseType, 'double') !== false:
+                return 'float';
 
             default:
                 return $databaseType;
