@@ -63,9 +63,7 @@ $ php artisan db:columns-doc --table=users
 
 ### Testing
 
-``` bash
-$ composer test
-```
+// TODO:
 
 ### Changelog
 
