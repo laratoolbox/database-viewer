@@ -43,7 +43,7 @@ updated_at
 
 * Get columns for a specific table as doc block formatted
 ```shell
-$ php artisan db-columns-doc --table=users
+$ php artisan db:columns-doc --table=users
 
 /**
  * @property int $id
