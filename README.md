@@ -7,6 +7,10 @@
 
 A laravel package that adds commands for getting table / column info into artisan cli.
 
+## Before install
+
+* This package works on mysql only.
+
 ## Installation
 
 You can install the package via composer:
