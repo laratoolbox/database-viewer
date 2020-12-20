@@ -5,7 +5,7 @@
 [![Quality Score](https://img.shields.io/scrutinizer/g/laratoolbox/database-viewer.svg?style=flat-square)](https://scrutinizer-ci.com/g/laratoolbox/database-viewer)
 [![Total Downloads](https://img.shields.io/packagist/dt/laratoolbox/database-viewer.svg?style=flat-square)](https://packagist.org/packages/laratoolbox/database-viewer)
 
-This package adds commands for getting table / column info into artisan cli.
+A laravel package that adds commands for getting table / column info into artisan cli.
 
 ## Installation
 
@@ -78,7 +78,8 @@ If you discover any security related issues, please email hasansemiherdogan@gmai
 ## Credits
 
 - [Semih ERDOGAN](https://github.com/laratoolbox)
-- [All Contributors](../../contributors)
+- [Dincer DEMIRCIOGLU](https://github.com/dinncer)
+- [All contributors](https://github.com/laratoolbox/database-viewer/graphs/contributors)
 - The social image generated with [banners.beyondco.de](https://banners.beyondco.de/).
 - This package was generated using the [Laravel Package Boilerplate](https://laravelpackageboilerplate.com).
 
